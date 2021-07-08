@@ -64,8 +64,9 @@ let sum = 0;
 
 for (let i = 0; i < grades.length; i++) {
     sum += grades[i];
-    averageOfGrades = sum / grades.length;
 }
+
+averageOfGrades = sum / grades.length;
 console.log(averageOfGrades);
 
 
@@ -83,8 +84,8 @@ function averageGrade(array) {
     let sum = 0;
     for (let i = 0; i < array.length; i++) {
         sum += array[i];
-        averageOfGrades = sum / array.length;
     }
+    averageOfGrades = sum / array.length;
     return averageOfGrades;
 }
 console.log(averageGrade([8, 9, 4, 6, 10]));

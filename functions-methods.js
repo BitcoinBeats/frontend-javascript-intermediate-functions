@@ -60,12 +60,7 @@ function checkEmailValidity(emailAddress) {
     const comma = emailAddress.includes(",");
     const dotAtEnd = emailAddress.endsWith(".");
 
-    if (atSign && !comma && !dotAtEnd) {
-        return true;
-    }
-    else {
-        return false;
-    }
+    return atSign && !comma && !dotAtEnd;
 }
 
 const emailValidity = checkEmailValidity("n.eeken@novi.nl");
