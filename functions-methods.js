@@ -13,7 +13,7 @@ function getEmailDomain(emailAddress) {
     return emailAddress.split("@")[1];
 }
 
-const domainName = getEmailDomain("eeken@novi-education.nl")
+const domainName = getEmailDomain("eeken@novi-education.nl");
 console.log(domainName);
 
 
@@ -27,15 +27,15 @@ console.log(domainName);
 
 function typeOfEmail(emailAddress) {
     const domain = emailAddress.split("@")[1];
-        if(domain === "novi-education.nl") {
-            return "Student";
-        }
-        if(domain === "novi.nl") {
-            return "Medewerker";
-        }
-        else {
-            return "Extern";
-        }
+    if (domain === "novi-education.nl") {
+        return "Student";
+    }
+    if (domain === "novi.nl") {
+        return "Medewerker";
+    }
+    else {
+        return "Extern";
+    }
 }
 
 const emailType = typeOfEmail("n.eeken@novi-education.nl");
@@ -60,12 +60,7 @@ function checkEmailValidity(emailAddress) {
     const comma = emailAddress.includes(",");
     const dotAtEnd = emailAddress.endsWith(".");
 
-        if (atSign && !comma && !dotAtEnd) {
-            return true;
-        }
-        else {
-            return false;
-        }
+    return atSign && !comma && !dotAtEnd;
 }
 
 const emailValidity = checkEmailValidity("n.eeken@novi.nl");
